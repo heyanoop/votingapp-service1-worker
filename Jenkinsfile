@@ -38,7 +38,7 @@ pipeline {
       
         stage('Update Manifest') {
             steps {
-               sh "sed -i 's|image: heyanoop/voteapp:.*|image: heyanoop/worker:${BUILD_NUMBER}|' k8s-specifications/worker-deployment.yaml"
+               sh "sed -i 's|image: heyanoop/worker:.*|image: heyanoop/worker:${BUILD_NUMBER}|' k8s-specifications/worker-deployment.yaml"
             }
         }
 
